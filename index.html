@@ -4,76 +4,100 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mohammed Irbaaz Faisel - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary-color: #1e3a8a;
-      --accent-color: #2563eb;
-      --bg-color: #f9fafb;
-      --text-color: #1f2937;
-      --card-bg: #ffffff;
-      --card-shadow: rgba(0, 0, 0, 0.1);
+      --primary: #1e3a8a;
+      --accent: #2563eb;
+      --bg: #f3f4f6;
+      --text: #1f2937;
+      --white: #fff;
+      --card-shadow: rgba(0, 0, 0, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-color);
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
     }
 
     header {
-      background-color: var(--primary-color);
+      background: linear-gradient(to right, var(--primary), var(--accent));
       color: white;
       text-align: center;
-      padding: 50px 20px;
+      padding: 60px 20px 40px;
     }
 
     header h1 {
-      margin: 0;
-      font-size: 2.8em;
+      font-size: 2.8rem;
     }
 
     header p {
-      font-size: 1.3em;
-      margin-top: 10px;
-      color: #dbeafe;
+      font-size: 1.2rem;
+      margin-top: 8px;
+      color: #e0f2fe;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px;
     }
 
     section {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
+      margin-bottom: 60px;
     }
 
     h2 {
-      color: var(--primary-color);
-      border-bottom: 2px solid var(--accent-color);
-      padding-bottom: 6px;
-      margin-bottom: 24px;
+      font-size: 1.8rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+      border-left: 5px solid var(--accent);
+      padding-left: 12px;
     }
 
     .card {
-      background-color: var(--card-bg);
-      padding: 22px;
-      margin-bottom: 20px;
+      background-color: var(--white);
       border-radius: 14px;
-      box-shadow: 0 4px 12px var(--card-shadow);
-      transition: transform 0.2s;
+      padding: 24px;
+      box-shadow: 0 8px 20px var(--card-shadow);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .card:hover {
-      transform: translateY(-3px);
+      transform: translateY(-6px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    }
+
+    .grid {
+      display: grid;
+      gap: 24px;
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .grid-1 {
+      grid-template-columns: 1fr;
     }
 
     ul {
       padding-left: 20px;
-      line-height: 1.8;
+      margin-top: 10px;
     }
 
     a {
-      color: var(--accent-color);
+      color: var(--accent);
+      font-weight: 600;
       text-decoration: none;
-      font-weight: bold;
     }
 
     a:hover {
@@ -81,24 +105,21 @@
     }
 
     footer {
-      background-color: var(--primary-color);
+      background: var(--primary);
       color: white;
       text-align: center;
       padding: 20px;
-      margin-top: 50px;
+      font-size: 0.9rem;
+      margin-top: 60px;
     }
 
-    @media screen and (max-width: 600px) {
+    @media (max-width: 600px) {
       header h1 {
-        font-size: 2em;
+        font-size: 2rem;
       }
 
-      header p {
-        font-size: 1.1em;
-      }
-
-      section {
-        padding: 0 15px;
+      h2 {
+        font-size: 1.5rem;
       }
     }
   </style>
@@ -107,98 +128,99 @@
 
   <header>
     <h1>Mohammed Irbaaz Faisel N</h1>
-    <p>MCA Student</p>
+    <p>MCA Student | Frontend Developer</p>
   </header>
 
-  <section>
-    <h2>About Me</h2>
-    <div class="card">
-      <p>Motivated MCA student with a strong foundation in software development. Passionate about learning and applying technical skills to real-world projects. Seeking an opportunity to contribute effectively while growing as a developer in a dynamic environment.</p>
-    </div>
-  </section>
-
-  <section>
-    <h2>Projects</h2>
-
-    <div class="card">
-      <h3>Pharma Find – Medicine Availability Finder</h3>
-      <p>A web app where users can find medicines in different medical stores. Admins can manage store inventory. Built using HTML, CSS, and JavaScript with localStorage.</p>
-      <p><a href="https://mohammedirbaazfaisel.github.io/Pharma_Find/" target="_blank">🔗 View Project</a></p>
-    </div>
-
-    <div class="card">
-      <h3>Quiz Generator – Terminal-Based Python Project</h3>
-      <p>A Python CLI-based quiz app that connects with MySQL to fetch randomized non-repeating questions. Tracks score and validates answers in real time. Useful for practicing quizzes via the terminal.</p>
-      <p><strong>Tech Stack:</strong> Python, MySQL</p>
-      <p><a href="https://github.com/MohammedIrbaazFaisel/Quiz_Genarator" target="_blank">🔗 View GitHub Repo</a></p>
-    </div>
-
-    <div class="card">
-      <h3>Amazon Clone Homepage</h3>
-      <p>A frontend clone of Amazon's homepage created using HTML and CSS, showcasing layout structure and responsive design skills.</p>
-    </div>
-
-
-    <div class="card">
-      <h3>QR Code Generator</h3>
-      <p>Python script that generates custom QR codes linking to my portfolio or other URLs. Uses the qrcode and Pillow libraries to create stylized QR images.</p>
-    </div>
-  </section>
-
-  <section>
-    <h2>Skills</h2>
-    <div class="card">
-      <ul>
-        <li>HTML, CSS</li>
-        <li>Python Programming</li>
-        <li>MySQL</li>
-        <li>Git & GitHub</li>
-        <li>Java(Basics)</li>
-      </ul>
-    </div>
-  </section>
-
-  <section>
-    <h2>Education</h2>
-
-    <div class="card">
-      <strong>SRM Institute of Science and Technology (2023–2025)</strong><br>
-      Master of Computer Applications (MCA)<br>
-      CGPA: 8.81 (Till 3rd Semester)
-    </div>
-
-    <div class="card">
-      <strong>The New College (2020–2023)</strong><br>
-      B.Sc in Computer Science<br>
-      CGPA: 7.7
-    </div>
-  </section>
-
-  <section>
-    <h2>Certifications</h2>
-    <div class="card">
-      <p>Completed Python Programming Course on Udemy.</p>
-    </div>
-  </section>
+  <main>
+    <section>
+      <h2>About Me</h2>
+      <div class="card">
+        <p>Motivated MCA student with a strong foundation in software development. Passionate about learning and applying technical skills to real-world projects. Seeking an opportunity to contribute effectively while growing as a developer in a dynamic environment.</p>
+      </div>
+    </section>
 
     <section>
-    <h2>Soft Skills</h2>
-    <div class="card">
-      <ul>
-        <li>Good at Communication Skills</li>
-        <li>Quick Learner</li>
-        <li>Collaborative</li>
-      </ul>
-    </div>
-  </section>
-  <section>
-    <h2>Contact</h2>
-    <div class="card">
-      <p><strong>Email:</strong> mohammedirbaaz16@gmail.com</p>
-      <p><strong>Phone:</strong> 8939629884</p>
-      <p><strong>Location:</strong> Perambur, Chennai – 600011</p>
-    </div>
-  </section>
+      <h2>Projects</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Pharma Find – Medicine Availability Finder</h3>
+          <p>Web app to locate medicines across stores. Admins manage inventory using HTML, CSS, JS, and localStorage.</p>
+          <a href="https://mohammedirbaazfaisel.github.io/Pharma_Find/" target="_blank">🔗 View Project</a>
+        </div>
+
+        <div class="card">
+          <h3>Quiz Generator – Terminal-Based</h3>
+          <p>Python CLI app with MySQL integration for random quiz generation and real-time score tracking.</p>
+          <p><strong>Stack:</strong> Python, MySQL</p>
+          <a href="https://github.com/MohammedIrbaazFaisel/Quiz_Genarator" target="_blank">🔗 GitHub Repo</a>
+        </div>
+
+        <div class="card">
+          <h3>Amazon Clone Homepage</h3>
+          <p>Frontend-only responsive clone of Amazon homepage using HTML & CSS to showcase layout skills.</p>
+        </div>
+
+        <div class="card">
+          <h3>QR Code Generator</h3>
+          <p>Python script using qrcode & Pillow libraries to generate custom QR codes for any URL.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <div class="card">
+        <ul>
+          <li>HTML, CSS</li>
+          <li>Python Programming</li>
+          <li>MySQL</li>
+          <li>Git & GitHub</li>
+          <li>Java (Basics)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <strong>SRM Institute of Science and Technology (2023–2025)</strong><br>
+          MCA – CGPA: 8.81 (Till 3rd Semester)
+        </div>
+        <div class="card">
+          <strong>The New College (2020–2023)</strong><br>
+          B.Sc in Computer Science – CGPA: 7.7
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Certifications</h2>
+      <div class="card">
+        <p>Completed Python Programming Course on Udemy.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Soft Skills</h2>
+      <div class="card">
+        <ul>
+          <li>Good Communication Skills</li>
+          <li>Quick Learner</li>
+          <li>Team Player & Collaborative</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <div class="card">
+        <p><strong>Email:</strong> mohammedirbaaz16@gmail.com</p>
+        <p><strong>Phone:</strong> 8939629884</p>
+        <p><strong>Location:</strong> Perambur, Chennai – 600011</p>
+      </div>
+    </section>
+  </main>
 
   <footer>
     <p>© 2025 Mohammed Irbaaz Faisel. All rights reserved.</p>
