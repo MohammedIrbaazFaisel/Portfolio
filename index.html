@@ -13,6 +13,8 @@
       --text: #1f2937;
       --white: #fff;
       --card-shadow: rgba(0, 0, 0, 0.08);
+      --badge-bg: #eff6ff;
+      --badge-text: #1e40af;
     }
 
     * {
@@ -61,6 +63,11 @@
       margin-bottom: 20px;
       border-left: 5px solid var(--accent);
       padding-left: 12px;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
     }
 
     .card {
@@ -113,6 +120,17 @@
       margin-top: 60px;
     }
 
+    .badge {
+      background: var(--badge-bg);
+      color: var(--badge-text);
+      font-size: 0.75rem;
+      padding: 4px 8px;
+      border-radius: 6px;
+      display: inline-block;
+      margin-top: 8px;
+      font-weight: 600;
+    }
+
     @media (max-width: 600px) {
       header h1 {
         font-size: 2rem;
@@ -135,37 +153,47 @@
     <section>
       <h2>About Me</h2>
       <div class="card">
-        <p> MCA student with a strong academic background in Computer Applications and a clear understanding of
- software development fundamentals. Familiar with HTML, CSS, Python, MySQL, and basic Java. Seeking an
- entry-level developer role to apply technical knowledge, gain practical experience, and contribute to software
- projects in a professional environment.</p>
+        <p>Recent MCA graduate with practical experience in building clean and functional web applications using HTML, CSS,
+ Python, Flask, and MySQL. Focused on creating real-world solutions with simple UI and efficient backend logic. Quick to
+ learn, adaptable, and comfortable working across the full development cycle.</p>
       </div>
     </section>
 
     <section>
       <h2>Projects</h2>
       <div class="grid grid-2">
+
+        <div class="card">
+          <h3>DressTrack – Inventory Manager</h3>
+          <p>Flask-based dress stock system with MySQL and dynamic UI for efficient inventory control and user-friendly stock updates.</p>
+          <span class="badge">Python • Flask • HTML • CSS • MySQL</span><br><br>
+          <a href="https://github.com/MohammedIrbaazFaisel/DressTrack" target="_blank">🔗 GitHub Repo</a>
+        </div>
+
         <div class="card">
           <h3>Pharma Find – Medicine Availability Finder</h3>
           <p>Web app to locate medicines across stores. Admins manage inventory using HTML, CSS, JS, and localStorage.</p>
+          <span class="badge">HTML • CSS • JavaScript</span><br><br>
           <a href="https://mohammedirbaazfaisel.github.io/Pharma_Find/" target="_blank">🔗 View Project</a>
         </div>
 
         <div class="card">
           <h3>Quiz Generator – Terminal-Based</h3>
           <p>Python CLI app with MySQL integration for random quiz generation and real-time score tracking.</p>
-          <p><strong>Stack:</strong> Python, MySQL</p>
+          <span class="badge">Python • MySQL</span><br><br>
           <a href="https://github.com/MohammedIrbaazFaisel/Quiz_Genarator" target="_blank">🔗 GitHub Repo</a>
         </div>
 
         <div class="card">
           <h3>Amazon Clone Homepage</h3>
           <p>Frontend-only responsive clone of Amazon homepage using HTML & CSS to showcase layout skills.</p>
+          <span class="badge">HTML • CSS</span>
         </div>
 
         <div class="card">
           <h3>QR Code Generator</h3>
           <p>Python script using qrcode & Pillow libraries to generate custom QR codes for any URL.</p>
+          <span class="badge">Python • Pillow • qrcode</span>
         </div>
       </div>
     </section>
